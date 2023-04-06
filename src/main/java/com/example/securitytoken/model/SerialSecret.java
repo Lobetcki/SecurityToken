@@ -5,18 +5,14 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import java.time.Instant;
 
 @Entity
 @Table
 @Getter
 @Setter
-public class Token {
+public class SerialSecret {
     @Id
-    private String uuid;
-    private Instant expiredData;
-    @ManyToOne
-    private SerialSecret serialSecret;
+    private String serial;
+    private String secret;
 }
